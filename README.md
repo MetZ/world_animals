@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # World Animals - Minecraft Bedrock 1.21 behavior pack
+=======
+# World Animals - Minecraft Bedrock 1.21 + behavior pack
+>>>>>>> 6955cf2 (updatede readme)
 
 First version and published for Curseforge, original from MCPEDL. 
 Downloaded from: https://mcpedl.com/world-animals-addon/
