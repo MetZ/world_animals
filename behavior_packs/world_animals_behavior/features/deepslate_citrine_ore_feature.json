@@ -1,0 +1,20 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "worldanimals:deepslate_citrine_ore_feature"
+    },
+    "count": 8,
+    "replace_rules": [
+      {
+        "places_block": "worldanimals:deepslate_citrine_ore",
+        "may_replace": [
+          { "name": "minecraft:deepslate" },
+          { "name": "minecraft:tuff" },
+          { "name": "minecraft:deepslate_tiles" },
+          { "name": "minecraft:deepslate_bricks" }
+        ]
+      }
+    ]
+  }
+}

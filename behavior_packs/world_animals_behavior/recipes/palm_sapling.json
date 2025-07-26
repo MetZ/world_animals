@@ -1,0 +1,33 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "worldanimals:palm_sapling"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "BBB",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stick"
+      },
+      "B": {
+        "item": "minecraft:leaves"
+      }
+    },
+    "result": {
+      "item": "worldanimals:palm_sapling",
+      "count": 1
+    }
+  },
+  "minecraft:recipe_unlock": {
+    "conditions": {
+      "any_of": [
+        { "item": "minecraft:stick" },
+        { "item": "minecraft:leaves" }
+      ]
+    }
+  }
+}

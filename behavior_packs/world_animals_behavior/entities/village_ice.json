@@ -1,0 +1,172 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:village_ice",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "despawning": {
+        "minecraft:type_family": {
+          "family": [
+            "village_ice",
+            "village_ice_despawning",
+            "mob"
+          ]
+        }
+      },
+      "minecraft:scared": {
+        "minecraft:angry": {
+          "duration": 5,
+          "broadcastAnger": true,
+          "broadcastRange": 10,
+          "broadcast_targets": [
+            "llama"
+          ],
+          "broadcast_filters": {
+            "test": "is_leashed_to",
+            "subject": "other",
+            "value": true
+          },
+          "calm_event": {
+            "event": "minecraft:become_calm",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "village_ice",
+          "mob"
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:movement": {
+        "value": 0.5
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:despawn": {
+        "remove_child_entities": true,
+        "filters": {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "village_ice_despawning"
+                },
+                {
+                  "test": "has_trade_supply",
+                  "subject": "self",
+                  "value": false
+                }
+              ]
+            },
+            {
+              "test": "distance_to_nearest_player",
+              "operator": ">",
+              "value": 24
+            }
+          ]
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "entity_attack",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "minecraft:become_scared"
+            }
+          },
+          {
+            "cause": "projectile",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "minecraft:become_scared"
+            }
+          },
+          {
+            "cause": "magic",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "minecraft:become_scared"
+            }
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:scheduled": {
+        "add": {
+          "component_groups": [
+            "minecraft:scared"
+          ]
+        }
+      },
+      "minecraft:start_despawn": {
+        "add": {
+          "component_groups": [
+            "despawning"
+          ]
+        }
+      },
+      "minecraft:become_scared": {
+        "add": {
+          "component_groups": [
+            "minecraft:scared"
+          ]
+        }
+      },
+      "minecraft:become_calm": {
+        "remove": {
+          "component_groups": [
+            "minecraft:scared"
+          ]
+        }
+      }
+    }
+  }
+}

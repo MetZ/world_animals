@@ -1,0 +1,84 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:orca",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "worldanimals:orca_aggressive": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                },
+                "event": "worldanimals:attack_player"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "orca",
+          "aquatic",
+          "mob"
+        ]
+      },
+      "minecraft:health": {
+        "max": 30,
+        "value": 30
+      },
+      "minecraft:attack": {
+        "damage": 5
+      },
+      "minecraft:physics": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "event": "worldanimals:react",
+            "deals_damage": true
+          }
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 0.85,
+        "height": 0.85
+      },
+      "minecraft:scale": {
+        "value": 2.25
+      }
+    },
+    "events": {
+      "worldanimals:react": {
+        "add": {
+          "component_groups": [
+            "worldanimals:orca_aggressive"
+          ]
+        }
+      },
+      "worldanimals:attack_player": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "add": {
+              "component_groups": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}

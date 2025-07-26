@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:sofa_zebra"
+    },
+    "components": {
+      "minecraft:icon": "sofa_zebra",
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.decorations"
+      },
+      "minecraft:display_name": {
+        "value": "Zebra Sofa"
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

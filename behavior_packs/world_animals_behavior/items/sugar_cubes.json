@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:sugar_cubes"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.food"
+      },
+      "minecraft:display_name": {
+        "value": "Sugar Cubes"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:use_modifiers": {
+        "use_duration": 32
+      },
+      "minecraft:food": {
+        "nutrition": 1,
+        "can_always_eat": true,
+        "using_converts_to": "minecraft:air"
+      }
+    }
+  }
+}

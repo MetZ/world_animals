@@ -1,0 +1,49 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:real_penguin_egg",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:agea": {
+        "minecraft:transformation": {
+          "into": "worldanimals:penguin"
+        }
+      }
+    },
+    "events": {
+      "minecraft:ageable_grow_up": {
+        "add": {
+          "component_groups": [
+            "minecraft:agea"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:despawn": {
+        "filters": {
+          "test": "is_family",
+          "subject": "other",
+          "operator": "==",
+          "value": "player"
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "deals_damage": true,
+            "cause": "all"
+          }
+        ]
+      }
+    }
+  }
+}

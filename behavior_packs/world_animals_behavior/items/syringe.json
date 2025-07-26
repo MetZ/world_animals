@@ -1,0 +1,17 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:syringe"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.tools"
+      },
+      "minecraft:display_name": {
+        "value": "Syringe"
+      },
+      "minecraft:max_stack_size": 16
+    }
+  }
+}

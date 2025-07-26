@@ -1,0 +1,243 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:ballena",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:ballena_aggressive": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 1,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "crab"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "squirrel"
+                  }
+                ]
+              },
+              "max_dist": 16
+            }
+          ],
+          "attack_interval_min": 1.0,
+          "must_see": true
+        },
+        "minecraft:attack": {
+          "damage": 4
+        }
+      },
+      "minecraft:ballena_baby": {
+        "minecraft:scale": {
+          "value": 0.9
+        }
+      },
+      "minecraft:ballena_adult": {
+        "minecraft:scale": {
+          "value": 3.0
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/entities/ballena.json"
+        }
+      },
+      "minecraft:ballena_passive": {
+        "minecraft:timer": {
+          "time": [
+            1,
+            3
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:target_far_enough",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 1,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "crab"
+              },
+              "max_dist": 8,
+              "walk_speed_multiplier": 1,
+              "sprint_speed_multiplier": 1
+            }
+          ]
+        }
+      },
+      "minecraft:look_behavior": {
+        "minecraft:behavior.look_at_player": {
+          "priority": 1,
+          "look_distance": 12,
+          "probability": 0.01
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 2
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 10 : 0"
+      },
+      "minecraft:nameable": {},
+      "minecraft:collision_box": {
+        "width": 3.0,
+        "height": 0.85
+      },
+      "minecraft:health": {
+        "value": 200,
+        "max": 200
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_damage",
+                    "value": "fatal"
+                  },
+                  {
+                    "test": "has_component",
+                    "subject": "self",
+                    "operator": "!=",
+                    "value": "minecraft:is_baby"
+                  }
+                ]
+              },
+              "event": "die"
+            }
+          }
+        ]
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:scale": {
+        "value": 1.5
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.1
+      },
+      "minecraft:follow_range": {
+        "value": 16,
+        "max": 16
+      },
+      "minecraft:navigation.generic": {
+        "is_amphibious": true,
+        "can_path_over_water": false,
+        "can_swim": true,
+        "can_walk": false,
+        "can_breach": true
+      },
+      "minecraft:movement.sway": {},
+      "minecraft:jump.static": {},
+      "minecraft:breathable": {
+        "breathes_water": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "ballena",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:movement.basic": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 90,
+                "remove": {},
+                "add": {
+                  "component_groups": [
+                    "minecraft:ballena_adult",
+                    "minecraft:look_behavior"
+                  ]
+                }
+              },
+              {
+                "weight": 10,
+                "remove": {},
+                "add": {
+                  "component_groups": [
+                    "minecraft:ballena_baby",
+                    "minecraft:look_behavior"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:target_too_close": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ballena_aggressive"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ballena_passive"
+          ]
+        }
+      },
+      "die": {
+        "add": {
+          "component_groups": [
+            "minecraft:ballena_passive"
+          ]
+        }
+      },
+      "minecraft:target_far_enough": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ballena_passive"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ballena_aggressive"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# generelle ting å ignorere
+*.bak
+*.tmp
+.DS_Store
+
+# valgfritt: ignorere Bedrock server output/logs hvis du plasserer dem her senere
+logs/

@@ -1,0 +1,59 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:capuchin_monkeys",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "worldanimals:melee_attack": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "track_target": true,
+          "reach_multiplier": 1.0
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "capuchin",
+          "mob"
+        ]
+      },
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:attack": {
+        "damage": 2
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "deals_damage": true
+          }
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:movement.basic": {},
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_walk": true,
+        "can_pass_doors": true,
+        "can_open_doors": false
+      }
+    },
+    "events": {
+      "worldanimals:attack_mode": {
+        "add": {
+          "component_groups": [
+            "worldanimals:melee_attack"
+          ]
+        }
+      }
+    }
+  }
+}

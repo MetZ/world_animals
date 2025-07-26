@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:ruby_hoe"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.hoe"
+      },
+      "minecraft:icon_texture": "ruby_hoe",
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 750
+      },
+      "minecraft:damageable": {
+        "max_damage": 750,
+        "repair_items": [
+          "worldanimals:ruby",
+          "worldanimals:ruby_hoe"
+        ]
+      },
+      "minecraft:mining_speed": 1.5,
+      "minecraft:damage": 5,
+      "minecraft:enchantable": {
+        "value": 14,
+        "slot": "hoe"
+      },
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": "minecraft:web",
+            "speed": 10
+          },
+          {
+            "block": "minecraft:bamboo",
+            "speed": 5
+          }
+        ]
+      },
+      "tag:is_hoe_custom": {}
+    }
+  }
+}

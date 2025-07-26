@@ -1,0 +1,18 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "worldanimals:ruby"
+    },
+    "tags": ["furnace", "smoker", "campfire", "blast_furnace"],
+    "input": "worldanimals:ruby_ore",
+    "output": "worldanimals:ruby"
+  },
+  "minecraft:recipe_unlock": {
+    "conditions": {
+      "any_of": [
+        { "item": "worldanimals:ruby_ore" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "World Animals BehaviorPack",
+    "description": "Created by ArathNido",
+    "uuid": "f9477432-52d7-458d-b5b4-76bed4addfb7",
+    "version": [
+      1,
+      0,
+      4
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "fc89019d-77e9-490a-bcb3-1339d1036d73",
+      "version": [
+        1,
+        0,
+        4
+      ]
+    }
+  ]
+}

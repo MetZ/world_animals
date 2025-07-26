@@ -1,0 +1,17 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:elephant_dna"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.ingredients"
+      },
+      "minecraft:display_name": {
+        "value": "Elephant DNA"
+      },
+      "minecraft:max_stack_size": 64
+    }
+  }
+}

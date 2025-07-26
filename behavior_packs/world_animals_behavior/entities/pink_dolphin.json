@@ -1,0 +1,40 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:pink_dolphin",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:collision_box": {
+        "width": 1.85,
+        "height": 0.8
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:underwater_movement": {
+        "value": 0.12
+      },
+      "minecraft:navigation.generic": {
+        "is_amphibious": true,
+        "can_walk": false,
+        "can_swim": true,
+        "can_breach": true
+      },
+      "minecraft:type_family": {
+        "family": ["pink_dolphin", "mob"]
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 5,
+        "look_distance": 6.0,
+        "probability": 0.02
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "worldanimals:ruby_ore"
+    },
+    "components": {
+      "tag:stone": {},
+      "minecraft:destroy_time": 3.0,
+      "minecraft:explosion_resistance": 6.0,
+      "minecraft:map_color": "#B31F2B",
+      "minecraft:block_light_absorption": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ruby_ore",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:loot": "loot_tables/blocks/ruby_ore.json"
+    }
+  }
+}

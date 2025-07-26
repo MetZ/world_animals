@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "worldanimals:bananas"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "nature",
+        "group": "itemGroup.name.nature"
+      },
+      "minecraft:display_name": {
+        "value": "Banana Block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "bananas",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:destroy_time": 0.3,
+      "minecraft:explosion_resistance": 1,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:loot": "loot_tables/blocks/bananas.json"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:astronaut_0"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.equipment"
+      },
+      "minecraft:display_name": {
+        "value": "Astronaut Suit 0"
+      },
+      "minecraft:max_stack_size": 1
+    }
+  }
+}

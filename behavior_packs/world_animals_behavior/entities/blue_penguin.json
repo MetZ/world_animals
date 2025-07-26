@@ -1,0 +1,105 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:blue_penguin",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "worldanimals:blue_penguin_baby": {
+        "minecraft:ageable": {
+          "duration": 1200,
+          "feed_items": [
+            "minecraft:cod",
+            "minecraft:salmon"
+          ],
+          "grow_up": {
+            "event": "worldanimals:on_grow_up"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "penguin",
+          "animal"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.9
+      },
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:movement": {
+        "value": 0.15
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": false
+      },
+      "minecraft:physics": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "deals_damage": true,
+            "event": "worldanimals:react"
+          }
+        }
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/blue_penguin.json"
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 3,
+        "track_target": true,
+        "cooldown_time": 1.2,
+        "reach_multiplier": 1.5
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 5,
+        "look_distance": 6
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:variant": 0,
+      "minecraft:attack": {
+        "damage": 3
+      }
+    },
+    "events": {
+      "worldanimals:react": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "worldanimals:blue_penguin_baby"
+              ]
+            }
+          }
+        ]
+      },
+      "worldanimals:on_grow_up": {
+        "remove": {
+          "component_groups": [
+            "worldanimals:blue_penguin_baby"
+          ]
+        }
+      }
+    }
+  }
+}

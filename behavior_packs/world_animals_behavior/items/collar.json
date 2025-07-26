@@ -1,0 +1,17 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:collar"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.equipment"
+      },
+      "minecraft:display_name": {
+        "value": "Collar"
+      },
+      "minecraft:max_stack_size": 16
+    }
+  }
+}

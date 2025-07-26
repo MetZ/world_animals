@@ -1,0 +1,96 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:lantern_fish",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "worldanimals:melee_attack": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "track_target": true,
+          "require_complete_path": false
+        }
+      },
+      "worldanimals:targeting": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      },
+      "worldanimals:movement": {
+        "minecraft:navigation.generic": {
+          "can_path": true,
+          "can_breach": false,
+          "can_swim": true,
+          "avoid_damage_blocks": true
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:underwater_movement": {
+          "drag_factor": 0.95
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "fish",
+          "water_animal"
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:collision_box": {
+        "width": 0.4,
+        "height": 0.3
+      },
+      "minecraft:health": {
+        "value": 4,
+        "max": 4
+      },
+      "minecraft:loot": "loot_tables/entities/lantern_fish.json",
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "event": "worldanimals:react"
+          }
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "worldanimals:react": {
+        "add": {
+          "component_groups": [
+            "worldanimals:melee_attack",
+            "worldanimals:targeting"
+          ]
+        }
+      }
+    }
+  }
+}

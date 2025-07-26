@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "World Animals TexturePack",
+        "description": "Created by ArathNido",
+        "uuid": "6090aa97-f0bf-4132-8450-72dfb93fa155",
+        "version": [
+            1,
+            0,
+            4
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "11cb47fe-3b5a-4085-bd9e-d9b3ae5bccfc",
+            "version": [
+                1,
+                0,
+                4
+            ]
+        }
+    ]
+}

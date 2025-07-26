@@ -1,0 +1,71 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "worldanimals:emperor_penguin_egg",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:agea": {
+        "minecraft:transformation": {
+          "into": "worldanimals:emperor_penguin"
+        }
+      }
+    },
+    "events": {
+      "minecraft:ageable_grow_up": {
+        "add": {
+          "component_groups": [
+            "minecraft:agea"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:ageable": {
+        "duration": 1200,
+        "feed_items": [
+          {
+            "item": "worldanimals:gold_bone_meal",
+            "growth": 0.25
+          }
+        ],
+        "grow_up": {
+          "event": "minecraft:ageable_grow_up",
+          "target": "self"
+        }
+      },
+      "minecraft:type_family": {
+        "family": [
+          "emperor_penguin_egg"
+        ]
+      },
+      "minecraft:health": {
+        "value": 10
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false
+      },
+      "minecraft:physics": {},
+      "minecraft:scale": {
+        "value": 0.4
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "deals_damage": true,
+              "event": "react"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

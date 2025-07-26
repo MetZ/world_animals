@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "World Animals [Structures Generator] BehaviorPack",
+    "description": "Created by ArathNido",
+    "uuid": "5e220a0d-e3f9-47be-a792-ddc04958dba4",
+    "version": [
+      1,
+      0,
+      4
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "7b7734cb-a45f-4bb1-9ff0-60ce622ffd46",
+      "version": [
+        1,
+        0,
+        4
+      ]
+    }
+  ]
+}

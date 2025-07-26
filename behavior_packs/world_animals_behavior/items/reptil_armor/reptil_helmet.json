@@ -1,0 +1,39 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:reptil_helmet"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.helmet"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:durability": {
+        "max_durability": 250
+      },
+      "minecraft:wearable": {
+        "slot": "slot.armor.head"
+      },
+      "minecraft:protection": {
+        "value": 2
+      },
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "armor_head"
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "worldanimals:reptil_skin",
+              "worldanimals:reptil_helmet"
+            ],
+            "repair_amount": 15
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": 0.0
+    }
+  }
+}
