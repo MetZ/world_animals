@@ -1,14 +1,19 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_furnace": {
     "description": {
-    "identifier": "worldanimals:cheese"
+      "identifier": "worldanimals:cheese"
     },
-
-    
     "tags": ["furnace", "smoker", "campfire", "blast_furnace"],
-    "input": "minecraft:bucket:1",
-    "output": "worldanimals:cheese"
+    "input": {
+      "item": "minecraft:bucket",
+      "data": 1
+    },
+    "output": {
+      "item": "worldanimals:cheese"
+    },
+    "unlock": [
+      { "item": "minecraft:bucket" }
+    ]
   }
-  
 }

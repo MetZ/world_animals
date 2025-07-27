@@ -1,28 +1,25 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:shark_melee"
+      "identifier": "worldanimals:shark_melee"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
-	  " A",
-	  "B "
+      " A",
+      "B "
     ],
     "key": {
-	    "A": {
-        "item": "worldanimals:feline_tooth"
-      },
-      "B": {
-        "item": "minecraft:stick"
-      }
+      "A": { "item": "worldanimals:feline_tooth" },
+      "B": { "item": "minecraft:stick" }
     },
     "result": {
       "item": "worldanimals:shark_melee",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:feline_tooth" },
+      { "item": "minecraft:stick" }
+    ]
   }
 }

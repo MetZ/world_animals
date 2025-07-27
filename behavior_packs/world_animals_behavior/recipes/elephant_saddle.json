@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:elephant_saddle"
+      "identifier": "worldanimals:elephant_saddle"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "AAA",
       "B B",
-	  "C C"
+      "C C"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "minecraft:leather"
       },
       "B": {
@@ -25,8 +23,12 @@
     },
     "result": {
       "item": "worldanimals:elephant_saddle",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "minecraft:leather" },
+      { "item": "minecraft:iron_ingot" },
+      { "item": "minecraft:chest" }
+    ]
   }
 }

@@ -1,18 +1,16 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:white_scarf"
+      "identifier": "worldanimals:white_scarf"
     },
-	
-	
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "AAA",
-	  "BAB"
+      "BAB"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "minecraft:wool"
       },
       "B": {
@@ -21,8 +19,11 @@
     },
     "result": {
       "item": "worldanimals:white_scarf",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "minecraft:wool" },
+      { "item": "minecraft:string" }
+    ]
   }
 }

@@ -1,14 +1,19 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_furnace": {
     "description": {
-    "identifier": "worldanimals:cooked_rat"
+      "identifier": "worldanimals:cooked_rat"
     },
-
-    
-    "tags": ["furnace", "smoker", "campfire", "blast_furnace"],
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "blast_furnace"
+    ],
     "input": "worldanimals:raw_rat",
-    "output": "worldanimals:cooked_rat"
+    "output": "worldanimals:cooked_rat",
+    "unlock": {
+      "item": "worldanimals:raw_rat"
+    }
   }
-  
 }

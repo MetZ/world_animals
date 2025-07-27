@@ -1,29 +1,26 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:citrine_pickaxe"
+      "identifier": "worldanimals:citrine_pickaxe"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "AAA",
-      " B",
-      " B"
+      " B ",
+      " B "
     ],
     "key": {
-	    "A": {
-        "item": "worldanimals:citrine"
-      },
-	    "B": {
-        "item": "minecraft:stick"
-      }
+      "A": { "item": "worldanimals:citrine" },
+      "B": { "item": "minecraft:stick" }
     },
     "result": {
       "item": "worldanimals:citrine_pickaxe",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:citrine" },
+      { "item": "minecraft:stick" }
+    ]
   }
 }

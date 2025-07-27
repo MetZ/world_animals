@@ -1,26 +1,26 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:ruby_block"
+      "identifier": "worldanimals:ruby_block"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "AAA",
       "AAA",
       "AAA"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:ruby"
       }
     },
     "result": {
       "item": "worldanimals:ruby_block",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:ruby" }
+    ]
   }
 }

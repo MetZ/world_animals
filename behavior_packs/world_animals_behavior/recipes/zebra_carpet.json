@@ -1,24 +1,24 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:zebra_carpet"
+      "identifier": "worldanimals:zebra_carpet"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "AA"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:zebra_skin"
       }
     },
     "result": {
       "item": "worldanimals:zebra_carpet",
-        "data": 0,
       "count": 3
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:zebra_skin" }
+    ]
   }
 }

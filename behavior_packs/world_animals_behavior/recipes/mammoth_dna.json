@@ -1,35 +1,28 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:mammoth_dna"
+      "identifier": "worldanimals:mammoth_dna"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "DBD",
-	  "CAC",
-	  "DBD"
+      "CAC",
+      "DBD"
     ],
     "key": {
-	    "A": {
-        "item": "worldanimals:elephant_dna"
-      },
-      "B": {
-        "item": "minecraft:clownfish"
-      },
-      "C": {
-        "item": "minecraft:golden_carrot"
-      },
-      "D": {
-        "item": "worldanimals:sugar_cubes"
-      }
+      "A": { "item": "worldanimals:elephant_dna" },
+      "B": { "item": "minecraft:clownfish" },
+      "C": { "item": "minecraft:golden_carrot" },
+      "D": { "item": "worldanimals:sugar_cubes" }
     },
     "result": {
       "item": "worldanimals:mammoth_dna",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:elephant_dna" },
+      { "item": "worldanimals:sugar_cubes" }
+    ]
   }
 }

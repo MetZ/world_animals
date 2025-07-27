@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:gold_swordfish"
+      "identifier": "worldanimals:gold_swordfish"
     },
-
-    
     "tags": [ "crafting_table" ],
     "pattern": [
       " B ",
       "BAB",
-	  " B "
+      " B "
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:weapon_swordfish"
       },
       "B": {
@@ -22,8 +20,11 @@
     },
     "result": {
       "item": "worldanimals:gold_swordfish",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "minecraft:gold_ingot" },
+      { "item": "worldanimals:weapon_swordfish" }
+    ]
   }
 }

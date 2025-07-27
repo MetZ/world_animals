@@ -1,35 +1,28 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:netherite_rhinoceros_saddle"
+      "identifier": "worldanimals:netherite_rhinoceros_saddle"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "A C",
       "ADD",
-	  "B B"
+      "B B"
     ],
     "key": {
-	    "A": {
-        "item": "minecraft:netherite_ingot"
-      },
-      "B": {
-        "item": "minecraft:iron_ingot"
-      },
-      "C": {
-        "item": "minecraft:chest"
-      },
-      "D": {
-        "item": "minecraft:leather"
-      }
+      "A": { "item": "minecraft:netherite_ingot" },
+      "B": { "item": "minecraft:iron_ingot" },
+      "C": { "item": "minecraft:chest" },
+      "D": { "item": "minecraft:leather" }
     },
     "result": {
       "item": "worldanimals:netherite_rhinoceros_saddle",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "minecraft:netherite_ingot" },
+      { "item": "minecraft:leather" }
+    ]
   }
 }

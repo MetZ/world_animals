@@ -1,26 +1,26 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:reptil_chest"
+      "identifier": "worldanimals:reptil_chest"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "A A",
       "AAA",
       "AAA"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:reptil_skin"
       }
     },
     "result": {
       "item": "worldanimals:reptil_chest",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:reptil_skin" }
+    ]
   }
 }

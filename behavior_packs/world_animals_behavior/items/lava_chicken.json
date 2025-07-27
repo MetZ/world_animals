@@ -1,0 +1,24 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "worldanimals:lava_chicken"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.food"
+      },
+      "minecraft:display_name": {
+        "value": "Lava Chicken"
+      },
+      "minecraft:food": {
+        "nutrition": 8,
+        "can_always_eat": false
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 32
+      },
+      "minecraft:max_stack_size": 64
+    }
+  }
+}

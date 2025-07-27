@@ -44,6 +44,12 @@
     "cooked_turkey": {
       "textures": "textures/items/cooked_turkey"
     },
+    "lava_essence": {
+      "textures": "textures/items/lava_essence"
+    },
+    "lava_chicken": {
+      "textures": "textures/items/lava_chicken"
+    },
     "prepared_raw_turkey": {
       "textures": "textures/items/prepared_raw_turkey"
     },

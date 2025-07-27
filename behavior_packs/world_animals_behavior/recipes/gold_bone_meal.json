@@ -1,24 +1,24 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:gold_bone_meal"
+      "identifier": "worldanimals:gold_bone_meal"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "A"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:collar"
       }
     },
     "result": {
       "item": "worldanimals:gold_bone_meal",
-        "data": 0,
       "count": 3
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:collar" }
+    ]
   }
 }

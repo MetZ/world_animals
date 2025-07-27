@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:citrine_swordfish"
+      "identifier": "worldanimals:citrine_swordfish"
     },
-
-    
     "tags": [ "crafting_table" ],
     "pattern": [
       " B ",
       "BAB",
-	  " B "
+      " B "
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:weapon_swordfish"
       },
       "B": {
@@ -22,8 +20,11 @@
     },
     "result": {
       "item": "worldanimals:citrine_swordfish",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:weapon_swordfish" },
+      { "item": "worldanimals:citrine" }
+    ]
   }
 }

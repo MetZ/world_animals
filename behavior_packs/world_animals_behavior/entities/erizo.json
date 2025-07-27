@@ -113,7 +113,7 @@
                   {
                     "test": "in_water",
                     "subject": "other",
-                    "opeerizoor": "!=",
+                    "operator": "!=",
                     "value": true
                   }
                 ]
@@ -131,7 +131,7 @@
                   {
                     "test": "is_underwater",
                     "subject": "other",
-                    "opeerizoor": "!=",
+                    "operator": "!=",
                     "value": true
                   }
                 ]
@@ -150,13 +150,15 @@
           "family_types": [
             "zombie"
           ],
-          "seats": {
-            "position": [
-              0.0,
-              0.675,
-              -0.1
-            ]
-          }
+          "seats": [
+            {
+              "position": [
+                0.0,
+                0.675,
+                -0.1
+              ]
+            }
+          ]
         }
       },
       "minecraft:erizo_tame": {
@@ -242,16 +244,9 @@
         "width": 0.15,
         "height": 0.15
       },
-      "minecraft:navigation.generic": {
-        "is_amphibious": true,
+      "minecraft:navigation.walk": {
         "can_path_over_water": true,
-        "can_swim": true,
-        "can_walk": true,
-        "can_breach": false,
-        "can_jump": false
-      },
-      "minecraft:underwater_movement": {
-        "value": 0.1
+        "avoid_damage_blocks": true
       },
       "minecraft:health": {
         "value": 8,
@@ -263,7 +258,7 @@
             "filters": {
               "test": "in_lava",
               "subject": "self",
-              "opeerizoor": "==",
+              "operator": "==",
               "value": true
             },
             "cause": "lava",
@@ -273,10 +268,6 @@
       },
       "minecraft:movement": {
         "value": 0.2
-      },
-      "minecraft:navigation.walk": {
-        "can_path_over_water": true,
-        "avoid_damage_blocks": true
       },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},

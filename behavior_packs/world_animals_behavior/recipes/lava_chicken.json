@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "worldanimals:lava_chicken"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " L ",
+      " C ",
+      "   "
+    ],
+    "key": {
+      "L": {
+        "item": "worldanimals:lava_essence"
+      },
+      "C": {
+        "item": "minecraft:chicken"
+      }
+    },
+    "result": {
+      "item": "worldanimals:lava_chicken",
+      "count": 1
+    },
+    "unlock": [
+      { "item": "minecraft:chicken" }
+    ]
+  }
+}

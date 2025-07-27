@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:syringe"
+      "identifier": "worldanimals:syringe"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "  A",
-	  " B ",
-	  "B  "
+      " B ",
+      "B  "
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "minecraft:iron_ingot"
       },
       "B": {
@@ -22,8 +20,11 @@
     },
     "result": {
       "item": "worldanimals:syringe",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "minecraft:iron_ingot" },
+      { "item": "minecraft:glass" }
+    ]
   }
 }

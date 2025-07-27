@@ -1,29 +1,30 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:pearl_sword"
+      "identifier": "worldanimals:pearl_sword"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "A",
       "A",
       "B"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:pearl"
       },
-	    "B": {
+      "B": {
         "item": "minecraft:stick"
       }
     },
     "result": {
       "item": "worldanimals:pearl_sword",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:pearl" },
+      { "item": "minecraft:stick" }
+    ]
   }
 }

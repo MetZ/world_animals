@@ -1,14 +1,22 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_furnace": {
     "description": {
-    "identifier": "worldanimals:citrine"
+      "identifier": "worldanimals:citrine"
     },
-
-    
-    "tags": ["furnace", "smoker", "campfire", "blast_furnace"],
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "blast_furnace"
+    ],
     "input": "worldanimals:citrine_ore",
-    "output": "worldanimals:citrine"
+    "output": "worldanimals:citrine",
+    "unlock": {
+      "context": "has_items",
+      "items": [
+        "worldanimals:citrine_ore"
+      ]
+    }
   }
-  
 }

@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:lime_scarf"
+      "identifier": "worldanimals:lime_scarf"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       " B ",
       "BAB",
-	  " B "
+      " B "
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:white_scarf"
       },
       "B": {
@@ -22,8 +20,11 @@
     },
     "result": {
       "item": "worldanimals:lime_scarf",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:white_scarf" },
+      { "item": "minecraft:lime_dye" }
+    ]
   }
 }

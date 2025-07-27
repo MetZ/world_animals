@@ -1,29 +1,30 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:ruby_shovel"
+      "identifier": "worldanimals:ruby_shovel"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "A",
       "B",
       "B"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:ruby"
       },
-	    "B": {
+      "B": {
         "item": "minecraft:stick"
       }
     },
     "result": {
       "item": "worldanimals:ruby_shovel",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:ruby" },
+      { "item": "minecraft:stick" }
+    ]
   }
 }

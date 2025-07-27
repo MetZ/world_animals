@@ -1,11 +1,9 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:citrine_chest"
+      "identifier": "worldanimals:citrine_chest"
     },
-
-    
     "tags": [ "crafting_table" ],
     "pattern": [
       "A A",
@@ -13,14 +11,16 @@
       "AAA"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:citrine"
       }
     },
     "result": {
       "item": "worldanimals:citrine_chest",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:citrine" }
+    ]
   }
 }

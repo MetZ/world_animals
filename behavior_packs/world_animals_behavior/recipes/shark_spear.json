@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:shark_spear"
+      "identifier": "worldanimals:shark_spear"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "  A",
-	  " B ",
-	  "B  "
+      " B ",
+      "B  "
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:shark_tooth"
       },
       "B": {
@@ -22,8 +20,11 @@
     },
     "result": {
       "item": "worldanimals:shark_spear",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:shark_tooth" },
+      { "item": "minecraft:stick" }
+    ]
   }
 }

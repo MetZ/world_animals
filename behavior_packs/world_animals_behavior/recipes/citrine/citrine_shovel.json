@@ -1,29 +1,30 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:citrine_shovel"
+      "identifier": "worldanimals:citrine_shovel"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "A",
       "B",
       "B"
     ],
     "key": {
-	    "A": {
+      "A": {
         "item": "worldanimals:citrine"
       },
-	    "B": {
+      "B": {
         "item": "minecraft:stick"
       }
     },
     "result": {
       "item": "worldanimals:citrine_shovel",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:citrine" },
+      { "item": "minecraft:stick" }
+    ]
   }
 }

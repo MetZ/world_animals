@@ -1,19 +1,17 @@
 {
-  "format_version": "1.12",
+  "format_version": "1.21.0",
   "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:elephant_citrine_armor"
+      "identifier": "worldanimals:elephant_citrine_armor"
     },
-
-    
-    "tags": [ "crafting_table" ],
+    "tags": ["crafting_table"],
     "pattern": [
       "ABA",
       "ABA",
-	  "AAA"
+      "AAA"
     ],
     "key": {
-	  "A": {
+      "A": {
         "item": "worldanimals:citrine"
       },
       "B": {
@@ -22,8 +20,11 @@
     },
     "result": {
       "item": "worldanimals:elephant_citrine_armor",
-        "data": 0,
       "count": 1
-    }
+    },
+    "unlock": [
+      { "item": "worldanimals:citrine" },
+      { "item": "minecraft:leather" }
+    ]
   }
 }

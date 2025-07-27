@@ -1,14 +1,24 @@
 {
-  "format_version": "1.12",
-  "minecraft:recipe_furnace": {
+  "format_version": "1.21.0",
+  "minecraft:recipe_shaped": {
     "description": {
-    "identifier": "worldanimals:cooked_crab"
+      "identifier": "worldanimals:cooked_crab"
     },
-
-    
-    "tags": ["furnace", "smoker", "campfire", "blast_furnace"],
-    "input": "worldanimals:raw_crab",
-    "output": "worldanimals:cooked_crab"
+    "tags": ["crafting_table"],
+    "pattern": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "worldanimals:raw_crab"
+      }
+    },
+    "result": {
+      "item": "worldanimals:cooked_crab",
+      "count": 1
+    },
+    "unlock": [
+      { "item": "worldanimals:raw_crab" }
+    ]
   }
-  
 }
