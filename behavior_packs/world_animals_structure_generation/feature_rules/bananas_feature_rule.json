@@ -1,5 +1,5 @@
 {
-  "format_version": "1.13.0",
+  "format_version": "1.21.0",
   "minecraft:feature_rules": {
     "description": {
       "identifier": "worldanimals:bananas_feature_rule",
@@ -32,7 +32,10 @@
       "x": 0,
       "y": {
         "distribution": "uniform",
-        "extent": [ "query.heightmap(variable.worldx, variable.worldz)", "query.heightmap(variable.worldx, variable.worldz) + 1" ]
+        "extent": [
+          "query.heightmap(variable.worldx, variable.worldz)",
+          "query.heightmap(variable.worldx, variable.worldz) + 1"
+        ]
       },
       "z": 0
     }

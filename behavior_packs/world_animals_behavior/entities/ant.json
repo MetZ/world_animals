@@ -121,7 +121,7 @@
     "components": {
       "minecraft:type_family": {
         "family": [
-          "polarbear",
+          "ant",
           "mob"
         ]
       },
@@ -164,7 +164,7 @@
       "minecraft:jump.static": {},
       "minecraft:can_climb": {},
       "minecraft:follow_range": {
-        "value": 48
+        "value": 20
       },
       "minecraft:behavior.float": {
         "priority": 0

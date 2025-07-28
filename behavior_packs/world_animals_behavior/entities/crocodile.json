@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.21.0",
   "minecraft:entity": {
     "description": {
       "identifier": "worldanimals:crocodile",
@@ -158,6 +158,14 @@
       },
       "minecraft:movement": {
         "value": 0.2
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.2
+      },
+      "minecraft:navigation.swim": {
+        "can_path": true,
+        "can_breach": true,
+        "can_jump": false
       },
       "minecraft:physics": {},
       "minecraft:pushable": {

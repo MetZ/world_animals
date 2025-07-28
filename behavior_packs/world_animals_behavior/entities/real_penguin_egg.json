@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.21.0",
   "minecraft:entity": {
     "description": {
       "identifier": "worldanimals:real_penguin_egg",
@@ -24,6 +24,19 @@
       }
     },
     "components": {
+      "minecraft:ageable": {
+        "duration": 1200,
+        "feed_items": [
+          {
+            "item": "worldanimals:gold_bone_meal",
+            "growth": 0.25
+          }
+        ],
+        "grow_up": {
+          "event": "minecraft:ageable_grow_up",
+          "target": "self"
+        }
+      },
       "minecraft:collision_box": {
         "width": 0.5,
         "height": 0.5

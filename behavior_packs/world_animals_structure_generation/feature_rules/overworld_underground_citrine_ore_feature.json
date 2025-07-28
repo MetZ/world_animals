@@ -1,34 +1,53 @@
 {
-	"format_version": "1.13.0",
-	"minecraft:feature_rules": {
-		"description": {
-			"identifier": "worldanimals:overworld_underground_citrine_ore_feature",
-			"places_feature": "worldanimals:citrine_ore_feature"
-		},
-		"conditions": {
-			"placement_pass": "underground_pass",
-			"minecraft:biome_filter": [
-				{
-					"any_of": [
-						{
-							"test": "has_biome_tag",
-							"operator": "==",
-							"value": "overworld"
-						},
-						{
-							"test": "has_biome_tag",
-							"operator": "==",
-							"value": "overworld_generation"
-						}
-					]
-				}
-			]
-		},
-		"distribution": {
-			"iterations": 1,
-			"x": 0,
-			"y": 0,
-			"z": 0
-		}
-	}
+  "format_version": "1.21.0",
+  "minecraft:feature_rule": {
+    "description": {
+      "identifier": "overworld_underground_citrine_ore_feature",
+      "places_feature": "worldanimals:citrine_ore_feature"
+    },
+    "conditions": {
+	"placement_pass": "underground_pass",
+	"minecraft:any_of": {
+        "tests": [
+          {
+            "test": "has_biome_tag",
+            "subject": "location",
+            "operator": "==",
+            "value": "overworld"
+          },
+          {
+            "test": "has_biome_tag",
+            "subject": "location",
+            "operator": "==",
+            "value": "mountains"
+          },
+          {
+            "test": "has_biome_tag",
+            "subject": "location",
+            "operator": "==",
+            "value": "forest"
+          }
+        ]
+      }
+    },
+    "placement": [
+      {
+        "minecraft:count_placement": {
+          "count": 8,
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      {
+        "minecraft:structure_placement": {
+          "structure_name": "worldanimals:citrine_ore_structure",
+          "adjustment_radius": 8,
+          "facing_direction": "random"
+        }
+      }
+    ]
+  }
 }

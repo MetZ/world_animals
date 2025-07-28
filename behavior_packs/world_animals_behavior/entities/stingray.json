@@ -71,7 +71,35 @@
         }
       }
     },
-    "components": {},
+    "components": {
+      "minecraft:physics": {},
+      "minecraft:navigation.swim": {},
+      "minecraft:movement": {
+        "value": 0.12
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "event": "worldanimals:react",
+            "deals_damage": true
+          }
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 0.3
+      },
+      "minecraft:breathable": {
+        "breathes_water": true
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/stingray.json"
+      },
+      "minecraft:nameable": {},
+      "minecraft:type_family": {
+        "family": ["stingray", "mob"]
+      }
+    },
     "events": {
       "minecraft:target_too_close": {
         "remove": {

@@ -27,13 +27,88 @@
         "can_swim": true,
         "can_breach": true
       },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "event": "worldanimals:on_damaged",
+            "deals_damage": true
+          }
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:loot": "loot_tables/entities/pink_dolphin.json",
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 3,
+        "entity_types": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
+              ]
+            },
+            "max_dist": 16
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 6
+      },
       "minecraft:type_family": {
-        "family": ["pink_dolphin", "mob"]
+        "family": [
+          "pink_dolphin",
+          "mob"
+        ]
       },
       "minecraft:behavior.look_at_player": {
         "priority": 5,
         "look_distance": 6.0,
         "probability": 0.02
+      }
+    },
+    "events": {
+      "worldanimals:on_damaged": {
+        "add": {
+          "component_groups": [
+            "worldanimals:melee_attack",
+            "worldanimals:targeting"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "worldanimals:melee_attack": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 4,
+          "track_target": true,
+          "require_complete_path": false
+        }
+      },
+      "worldanimals:targeting": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  }
+                ]
+              },
+              "max_dist": 16
+            }
+          ]
+        }
       }
     }
   }

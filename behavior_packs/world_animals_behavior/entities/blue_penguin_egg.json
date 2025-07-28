@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.21.0",
   "minecraft:entity": {
     "description": {
       "identifier": "worldanimals:blue_penguin_egg",
@@ -8,7 +8,7 @@
       "is_experimental": false
     },
     "component_groups": {
-      "minecraft:agea": {
+      "minecraft:transform_to_blue_penguin": {
         "minecraft:transformation": {
           "into": "worldanimals:blue_penguin"
         }
@@ -18,7 +18,7 @@
       "minecraft:ageable_grow_up": {
         "add": {
           "component_groups": [
-            "minecraft:agea"
+            "minecraft:transform_to_blue_penguin"
           ]
         }
       },

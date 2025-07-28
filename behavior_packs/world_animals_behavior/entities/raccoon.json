@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.21.0",
   "minecraft:entity": {
     "description": {
       "identifier": "worldanimals:raccoon",
@@ -11,7 +11,7 @@
       "minecraft:raccoon_baby": {
         "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value": 0.5
+          "value": 0.25
         },
         "minecraft:ageable": {
           "duration": 1200,
@@ -25,6 +25,10 @@
             "event": "minecraft:ageable_grow_up",
             "target": "self"
           }
+        },
+        "minecraft:behavior.follow_parent": {
+          "priority": 4,
+          "speed_multiplier": 1.25
         }
       },
       "minecraft:raccoon_adult": {
@@ -34,44 +38,7 @@
         },
         "minecraft:loot": {
           "table": "loot_tables/entities/reptils.json"
-        },
-        "minecraft:breedable": {
-          "require_tame": true,
-          "require_full_health": true,
-          "breeds_with": {
-            "mate_type": "minecraft:raccoon",
-            "baby_type": "minecraft:raccoon",
-            "breed_event": {
-              "event": "minecraft:entity_born",
-              "target": "baby"
-            }
-          },
-          "breed_items": [
-            "chicken",
-            "cooked_chicken",
-            "beef",
-            "cooked_beef",
-            "muttonRaw",
-            "muttonCooked",
-            "porkchop",
-            "cooked_porkchop",
-            "rabbit",
-            "cooked_rabbit",
-            "rotten_flesh"
-          ]
         }
-      },
-      "minecraft:raccoon_angry": {
-        "minecraft:angry": {
-          "duration": 25,
-          "broadcast_anger": true,
-          "broadcast_range": 20,
-          "calm_event": {
-            "event": "minecraft:on_calm",
-            "target": "self"
-          }
-        },
-        "minecraft:on_target_acquired": {}
       },
       "minecraft:raccoon_wild": {
         "minecraft:tameable": {
@@ -124,6 +91,31 @@
             "event": "minecraft:on_unleash",
             "target": "self"
           }
+        }
+      },
+      "minecraft:raccoon_angry": {
+        "minecraft:attack": {
+          "damage": 4
+        },
+        "minecraft:angry": {
+          "duration": 500,
+          "broadcast_anger": false,
+          "broadcast_range": 20,
+          "calm_event": {
+            "event": "minecraft:on_calm",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:raccoon_group": {
+        "minecraft:behavior.random_stroll": {
+          "priority": 5,
+          "speed_multiplier": 0.75
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 6,
+          "target_distance": 8.0,
+          "probability": 0.01
         }
       }
     },

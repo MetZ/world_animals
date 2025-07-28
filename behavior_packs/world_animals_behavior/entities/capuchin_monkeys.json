@@ -14,21 +14,68 @@
           "track_target": true,
           "reach_multiplier": 1.0
         }
+      },
+      "worldanimals:tame": {
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 1.1,
+          "start_distance": 10,
+          "stop_distance": 2
+        }
+      },
+      "worldanimals:breeding": {
+        "minecraft:breedable": {
+          "require_tame": true,
+          "breed_items": [
+            "minecraft:apple",
+            "minecraft:golden_apple",
+            "minecraft:carrot"
+          ]
+        }
+      },
+      "worldanimals:social": {
+        "minecraft:behavior.tempt": {
+          "priority": 3,
+          "speed_multiplier": 1.0,
+          "items": [
+            "minecraft:apple",
+            "minecraft:golden_apple",
+            "minecraft:carrot",
+            "minecraft:melon_slice"
+          ]
+        },
+        "minecraft:behavior.panic": {
+          "priority": 1,
+          "speed_multiplier": 1.5
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 6,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 7,
+          "probability": 0.02
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 8
+        }
       }
     },
     "components": {
       "minecraft:type_family": {
         "family": [
           "capuchin",
-          "mob"
+          "animal"
         ]
       },
+      "minecraft:nameable": {},
       "minecraft:health": {
-        "value": 10,
-        "max": 10
+        "value": 12,
+        "max": 12
       },
       "minecraft:attack": {
-        "damage": 2
+        "damage": 3
       },
       "minecraft:damage_sensor": {
         "triggers": {
@@ -37,16 +84,34 @@
           }
         }
       },
-      "minecraft:physics": {},
-      "minecraft:movement.basic": {},
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.0
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
       "minecraft:navigation.walk": {
         "can_path_over_water": true,
-        "can_walk": true,
-        "can_pass_doors": true,
-        "can_open_doors": false
+        "avoid_damage_blocks": true,
+        "can_climb": true
+      },
+      "minecraft:can_climb": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
       }
     },
     "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "worldanimals:tame",
+            "worldanimals:social"
+          ]
+        }
+      },
       "worldanimals:attack_mode": {
         "add": {
           "component_groups": [

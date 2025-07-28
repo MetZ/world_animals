@@ -16,8 +16,10 @@
         "minecraft:ageable": {
           "duration": 1200,
           "feed_items": [
-            "fish",
-            "salmon"
+            "minecraft:apple",
+            "minecraft:golden_apple",
+            "minecraft:sweet_berries",
+            "fortniteaddon:banana"
           ],
           "grow_up": {
             "event": "minecraft:ageable_grow_up",
@@ -147,19 +149,6 @@
             }
           ],
           "must_see": true
-        },
-        "minecraft:rideable": {
-          "seat_count": 1,
-          "family_types": [
-            "zombie"
-          ],
-          "seats": {
-            "position": [
-              0.0,
-              0.675,
-              -0.1
-            ]
-          }
         }
       },
       "minecraft:gorilla_unchested": {
@@ -168,21 +157,19 @@
             {
               "play_sounds": "armor.equip_generic",
               "on_interact": {
-                "filters": {
-                  "all_of": [
-                    {
-                      "test": "is_family",
-                      "subject": "other",
-                      "value": "player"
-                    },
-                    {
-                      "test": "has_equipment",
-                      "domain": "hand",
-                      "subject": "other",
-                      "value": "worldanimals:none"
-                    }
-                  ]
-                },
+                "filters": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "has_equipment",
+                    "domain": "hand",
+                    "subject": "other",
+                    "value": "worldanimals:none"
+                  }
+                ],
                 "event": "minecraft:on_chest",
                 "target": "self"
               },

@@ -8,7 +8,7 @@
       "is_experimental": false
     },
     "component_groups": {
-      "minecraft:agea": {
+      "minecraft:transform_to_penguin_african": {
         "minecraft:transformation": {
           "into": "worldanimals:penguin_african"
         }
@@ -18,7 +18,7 @@
       "minecraft:ageable_grow_up": {
         "add": {
           "component_groups": [
-            "minecraft:agea"
+            "minecraft:transform_to_penguin_african"
           ]
         }
       }

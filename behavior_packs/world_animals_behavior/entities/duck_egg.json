@@ -24,6 +24,13 @@
       }
     },
     "components": {
+      "minecraft:ageable": {
+        "duration": 1200,
+        "grow_up": {
+          "event": "minecraft:ageable_grow_up",
+          "target": "self"
+        }
+      },
       "minecraft:collision_box": {
         "width": 0.5,
         "height": 0.5
@@ -31,8 +38,12 @@
       "minecraft:damage_sensor": {
         "triggers": [
           {
+            "cause": "all",
             "deals_damage": true,
-            "cause": "all"
+            "on_damage": {
+              "event": "react",
+              "target": "self"
+            }
           }
         ]
       },

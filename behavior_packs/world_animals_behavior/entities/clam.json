@@ -67,21 +67,19 @@
         ]
       },
       "minecraft:movement": {
-        "value": 0.0
+        "value": 0.1
       },
       "minecraft:underwater_movement": {
-        "value": 0.0
+        "value": 0.1
       },
       "minecraft:follow_range": {
         "value": 16,
         "max": 16
       },
-      "minecraft:navigation.generic": {
-        "is_amphibious": true,
-        "can_path_over_water": false,
-        "can_swim": true,
-        "can_walk": false,
-        "can_breach": true
+      "minecraft:navigation.swim": {
+        "can_path": true,
+        "can_breach": true,
+        "can_jump": false
       },
       "minecraft:movement.sway": {},
       "minecraft:jump.static": {},
@@ -118,8 +116,7 @@
             "deals_damage": true
           }
         }
-      },
-      "minecraft:movement.basic": {}
+      }
     },
     "events": {
       "minecraft:target_too_close": {

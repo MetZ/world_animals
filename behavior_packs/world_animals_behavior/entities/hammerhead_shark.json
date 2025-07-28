@@ -7,7 +7,36 @@
       "is_summonable": true,
       "is_experimental": false
     },
-    "component_groups": {},
+    "component_groups": {
+      "minecraft:hammerhead_shark_passive": {
+        "minecraft:behavior.random_stroll": {
+          "priority": 2,
+          "speed_multiplier": 1.0
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 1,
+          "look_distance": 8
+        }
+      },
+      "minecraft:hammerhead_shark_aggressive": {
+        "minecraft:behavior.melee_attack": {
+          "priority": 3
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 4,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      }
+    },
     "components": {
       "minecraft:scale": {
         "value": 0.45
@@ -19,6 +48,11 @@
       "minecraft:underwater_movement": {
         "target_range": 16
       },
+      "minecraft:navigation.swim": {
+        "can_path": true,
+        "can_breach": true,
+        "can_jump": false
+      },
       "minecraft:attack": {
         "damage": 5
       },
@@ -28,6 +62,10 @@
           "monster",
           "mob"
         ]
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 0.7
       },
       "minecraft:physics": {},
       "minecraft:damage_sensor": {
@@ -40,6 +78,23 @@
       }
     },
     "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": [
+                "minecraft:hammerhead_shark_passive"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:hammerhead_shark_aggressive"
+              ]
+            }
+          }
+        ]
+      },
       "minecraft:target_too_close": {
         "add": {
           "component_groups": [
